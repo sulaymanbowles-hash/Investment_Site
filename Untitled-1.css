@@ -178,7 +178,6 @@ td, th {
 }
 
 [class^="w-icon-"], [class*=" w-icon-"] {
-  speak: none;
   font-variant: normal;
   text-transform: none;
   -webkit-font-smoothing: antialiased;
@@ -278,6 +277,7 @@ html.w-mod-touch * {
 
 input.w-button {
   -webkit-appearance: button;
+  appearance: button;
 }
 
 html[data-w-dynpage] [data-w-cloak] {
@@ -486,6 +486,7 @@ fieldset {
 button, [type="button"], [type="reset"] {
   cursor: pointer;
   -webkit-appearance: button;
+  appearance: button;
   border: 0;
 }
 
@@ -515,7 +516,6 @@ label {
 
 .w-input, .w-select {
   color: #333;
-  vertical-align: middle;
   background-color: #fff;
   border: 1px solid #ccc;
   width: 100%;
@@ -1426,6 +1426,7 @@ textarea.w-input, textarea.w-select {
   opacity: 0;
   -webkit-user-select: none;
   -moz-user-select: none;
+  user-select: none;
   -webkit-tap-highlight-color: transparent;
   background: #000000e6;
   outline: 0;
@@ -1438,6 +1439,7 @@ textarea.w-input, textarea.w-select {
   position: fixed;
   inset: 0;
   -webkit-transform: translate(0);
+  transform: translate(0);
 }
 
 .w-lightbox-backdrop, .w-lightbox-container {
@@ -1569,6 +1571,7 @@ textarea.w-input, textarea.w-select {
   padding: 2vh 1vh;
   display: inline-block;
   -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 .w-lightbox-active {
