@@ -1,0 +1,52 @@
+{
+  "name": "investment-thesis-platform",
+  "version": "1.0.0",
+  "description": "AI-Powered Portfolio Intelligence & Technology Investment Analysis Platform",
+  "main": "index.html",
+  "type": "module",
+  "scripts": {
+    "dev": "python -m http.server 3000",
+    "start": "python -m http.server 3000",
+    "build": "echo 'Build process not yet implemented - Phase 2+'",
+    "lint": "echo 'Linting not yet implemented - Phase 2+'",
+    "test": "echo 'Testing not yet implemented - Phase 2+'"
+  },
+  "keywords": [
+    "investment",
+    "portfolio",
+    "ai",
+    "finance",
+    "technology",
+    "analysis",
+    "real-time",
+    "dashboard"
+  ],
+  "author": "Sulayman Bowles",
+  "license": "MIT",
+  "dependencies": {
+    "chart.js": "^4.4.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sulaymanbowles-hash/Investment_Site.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sulaymanbowles-hash/Investment_Site/issues"
+  },
+  "homepage": "https://github.com/sulaymanbowles-hash/Investment_Site#readme",
+  "engines": {
+    "node": ">=16.0.0",
+    "python": ">=3.8.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "config": {
+    "phase": "1",
+    "enableAPIs": false,
+    "developmentMode": true
+  }
+}
