@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional investment research and portfolio showcase - Expert financial analysis and market insights">
+    <meta name="keywords" content="investment, research, portfolio, financial analysis, market insights, wealth management">
+    <meta name="author" content="Investment Research Team">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://investment-site.com/">
+    <meta property="og:title" content="Investment Research Showcase">
+    <meta property="og:description" content="Professional investment research and portfolio showcase">
+    <meta property="og:image" content="/assets/images/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://investment-site.com/">
+    <meta property="twitter:title" content="Investment Research Showcase">
+    <meta property="twitter:description" content="Professional investment research and portfolio showcase">
+    <meta property="twitter:image" content="/assets/images/og-image.jpg">
+
+    <title>Investment Research Showcase | Professional Portfolio & Market Analysis</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/css/main.css" as="style">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/components.css">
+    <link rel="stylesheet" href="/assets/css/animations.css">
+    <link rel="stylesheet" href="/assets/css/advanced-enhancements.css">
+    <link rel="stylesheet" href="/assets/css/content-enhancements.css">
+    <link rel="stylesheet" href="/assets/css/contact-footer.css">
+    <link rel="stylesheet" href="/assets/css/responsive-navigation.css">
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.min.js" defer></script>
+    
+    <!-- AOS Library for scroll animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+</head>
+<body>
+    <!-- Skip link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav container" aria-label="Main navigation">
+            <div class="nav__brand">
+                <a href="#" class="nav__logo">
+                    <svg class="nav__logo-icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill="currentColor" d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 1L9 7V9C9 10.1 9.9 11 11 11V16L7.5 17.5C7.1 17.7 6.6 17.5 6.4 17.1L4.1 12.3L2.5 13L4.8 17.8C5.5 19.2 7.2 19.8 8.6 19.1L12 17.4L15.4 19.1C16.8 19.8 18.5 19.2 19.2 17.8L21.5 13L19.9 12.3L17.6 17.1C17.4 17.5 16.9 17.7 16.5 17.5L13 16V11C14.1 11 15 10.1 15 9H21Z"/>
+                    </svg>
+                    <span class="nav__logo-text">InvestPro</span>
+                </a>
+            </div>
+            
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link nav__link--active">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#research" class="nav__link">Research</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#portfolio" class="nav__link">Portfolio</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#market" class="nav__link">Market</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">About</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link nav__link--cta">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span class="nav__toggle-line"></span>
+                <span class="nav__toggle-line"></span>
+                <span class="nav__toggle-line"></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="nav-overlay" id="nav-overlay"></div>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero__container container">
+                <div class="hero__content" data-aos="fade-up" data-aos-duration="1000">
+                    <h1 class="hero__title">
+                        Investment Research
+                        <span class="hero__title-highlight">Redefined</span>
+                    </h1>
+                    <p class="hero__description">
+                        Discover data-driven investment opportunities through our comprehensive research platform. 
+                        Professional analysis, real-time insights, and proven strategies for modern investors.
+                    </p>
+                    <div class="hero__actions">
+                        <a href="#research" class="btn btn--primary">Explore Research</a>
+                        <a href="#portfolio" class="btn btn--secondary">View Portfolio</a>
+                    </div>
+                </div>
+                <div class="hero__visual float-animation" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
+                    <div class="hero__chart-container glass-container">
+                        <canvas id="hero-chart" class="hero__chart" aria-label="Market performance visualization"></canvas>
+                    </div>
+                    <div class="hero__stats">
+                        <div class="stat float-animation-delayed" data-aos="fade-up" data-aos-delay="400">
+                            <span class="stat__value" data-counter="25.7">0</span>
+                            <span class="stat__unit">%</span>
+                            <span class="stat__label">Annual Return</span>
+                        </div>
+                        <div class="stat float-animation-slow" data-aos="fade-up" data-aos-delay="500">
+                            <span class="stat__value" data-counter="150">0</span>
+                            <span class="stat__unit">+</span>
+                            <span class="stat__label">Research Reports</span>
+                        </div>
+                        <div class="stat float-animation" data-aos="fade-up" data-aos-delay="600">
+                            <span class="stat__value" data-counter="98.2">0</span>
+                            <span class="stat__unit">%</span>
+                            <span class="stat__label">Accuracy Rate</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Market Overview Section -->
+        <section class="market-overview" id="market">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">Market Overview</h2>
+                    <p class="section-description">Real-time market data and key performance indicators</p>
+                </div>
+                
+                <div class="market-grid">
+                    <div class="market-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="market-card__header">
+                            <h3 class="market-card__title">S&P 500</h3>
+                            <span class="market-card__symbol">SPX</span>
+                        </div>
+                        <div class="market-card__value">
+                            <span class="market-card__price">4,567.89</span>
+                            <span class="market-card__change market-card__change--positive">+1.24%</span>
+                        </div>
+                        <div class="market-card__chart">
+                            <canvas id="sp500-chart" class="mini-chart"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="market-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="market-card__header">
+                            <h3 class="market-card__title">NASDAQ</h3>
+                            <span class="market-card__symbol">IXIC</span>
+                        </div>
+                        <div class="market-card__value">
+                            <span class="market-card__price">14,789.33</span>
+                            <span class="market-card__change market-card__change--positive">+2.15%</span>
+                        </div>
+                        <div class="market-card__chart">
+                            <canvas id="nasdaq-chart" class="mini-chart"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="market-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="market-card__header">
+                            <h3 class="market-card__title">Dow Jones</h3>
+                            <span class="market-card__symbol">DJI</span>
+                        </div>
+                        <div class="market-card__value">
+                            <span class="market-card__price">35,678.90</span>
+                            <span class="market-card__change market-card__change--negative">-0.58%</span>
+                        </div>
+                        <div class="market-card__chart">
+                            <canvas id="dow-chart" class="mini-chart"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="market-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="market-card__header">
+                            <h3 class="market-card__title">Bitcoin</h3>
+                            <span class="market-card__symbol">BTC</span>
+                        </div>
+                        <div class="market-card__value">
+                            <span class="market-card__price">$42,567</span>
+                            <span class="market-card__change market-card__change--positive">+3.45%</span>
+                        </div>
+                        <div class="market-card__chart">
+                            <canvas id="btc-chart" class="mini-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Section -->
+        <section class="research" id="research">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">Investment Research</h2>
+                    <p class="section-description">In-depth analysis and actionable insights for informed decision making</p>
+                </div>
+                
+                <div class="research-grid">
+                    <article class="research-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="research-card__image">
+                            <img src="/assets/images/research-tech.jpg" alt="Technology sector analysis" loading="lazy">
+                            <div class="research-card__category">Technology</div>
+                        </div>
+                        <div class="research-card__content">
+                            <h3 class="research-card__title">AI Revolution: Investment Opportunities in 2025</h3>
+                            <p class="research-card__excerpt">
+                                Comprehensive analysis of artificial intelligence companies poised for explosive growth, 
+                                including detailed financial metrics and market positioning.
+                            </p>
+                            <div class="research-card__meta">
+                                <span class="research-card__date">Jul 20, 2025</span>
+                                <span class="research-card__rating">
+                                    <span class="rating-stars">★★★★★</span>
+                                    Strong Buy
+                                </span>
+                            </div>
+                            <a href="#" class="research-card__link">Read Full Report</a>
+                        </div>
+                    </article>
+                    
+                    <article class="research-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="research-card__image">
+                            <img src="/assets/images/research-energy.jpg" alt="Energy sector analysis" loading="lazy">
+                            <div class="research-card__category">Energy</div>
+                        </div>
+                        <div class="research-card__content">
+                            <h3 class="research-card__title">Green Energy Transition: The Next Mega Trend</h3>
+                            <p class="research-card__excerpt">
+                                Deep dive into renewable energy investments, government policies impact, 
+                                and the companies leading the sustainable energy revolution.
+                            </p>
+                            <div class="research-card__meta">
+                                <span class="research-card__date">Jul 18, 2025</span>
+                                <span class="research-card__rating">
+                                    <span class="rating-stars">★★★★☆</span>
+                                    Buy
+                                </span>
+                            </div>
+                            <a href="#" class="research-card__link">Read Full Report</a>
+                        </div>
+                    </article>
+                    
+                    <article class="research-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="research-card__image">
+                            <img src="/assets/images/research-healthcare.jpg" alt="Healthcare sector analysis" loading="lazy">
+                            <div class="research-card__category">Healthcare</div>
+                        </div>
+                        <div class="research-card__content">
+                            <h3 class="research-card__title">Biotech Breakthrough: Gene Therapy Investments</h3>
+                            <p class="research-card__excerpt">
+                                Analysis of cutting-edge gene therapy companies with breakthrough treatments 
+                                in clinical trials and their market potential.
+                            </p>
+                            <div class="research-card__meta">
+                                <span class="research-card__date">Jul 15, 2025</span>
+                                <span class="research-card__rating">
+                                    <span class="rating-stars">★★★★★</span>
+                                    Strong Buy
+                                </span>
+                            </div>
+                            <a href="#" class="research-card__link">Read Full Report</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section class="portfolio" id="portfolio">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">Portfolio Performance</h2>
+                    <p class="section-description">Track record of successful investment strategies and returns</p>
+                </div>
+                
+                <div class="portfolio-dashboard">
+                    <div class="portfolio-summary" data-aos="fade-right">
+                        <div class="portfolio-card">
+                            <h3 class="portfolio-card__title">Total Portfolio Value</h3>
+                            <div class="portfolio-card__value">$2,847,329</div>
+                            <div class="portfolio-card__change portfolio-card__change--positive">
+                                +$147,329 (+5.45%) This Month
+                            </div>
+                        </div>
+                        
+                        <div class="allocation-chart-container">
+                            <h4 class="chart-title">Asset Allocation</h4>
+                            <canvas id="allocation-chart" class="allocation-chart"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-performance" data-aos="fade-left">
+                        <div class="performance-header">
+                            <h3 class="performance-title">Performance Overview</h3>
+                            <div class="time-selector">
+                                <button class="time-btn time-btn--active" data-period="1M">1M</button>
+                                <button class="time-btn" data-period="3M">3M</button>
+                                <button class="time-btn" data-period="6M">6M</button>
+                                <button class="time-btn" data-period="1Y">1Y</button>
+                                <button class="time-btn" data-period="ALL">ALL</button>
+                            </div>
+                        </div>
+                        <div class="performance-chart-container">
+                            <canvas id="performance-chart" class="performance-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="holdings-table" data-aos="fade-up">
+                    <h3 class="holdings-title">Top Holdings</h3>
+                    <div class="table-container">
+                        <table class="holdings-table__table">
+                            <thead>
+                                <tr>
+                                    <th>Symbol</th>
+                                    <th>Company</th>
+                                    <th>Shares</th>
+                                    <th>Price</th>
+                                    <th>Value</th>
+                                    <th>Change</th>
+                                    <th>Weight</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>AAPL</strong></td>
+                                    <td>Apple Inc.</td>
+                                    <td>1,250</td>
+                                    <td>$189.45</td>
+                                    <td>$236,812</td>
+                                    <td class="positive">+2.34%</td>
+                                    <td>8.3%</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>MSFT</strong></td>
+                                    <td>Microsoft Corp.</td>
+                                    <td>850</td>
+                                    <td>$245.67</td>
+                                    <td>$208,820</td>
+                                    <td class="positive">+1.87%</td>
+                                    <td>7.3%</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>NVDA</strong></td>
+                                    <td>NVIDIA Corp.</td>
+                                    <td>450</td>
+                                    <td>$378.92</td>
+                                    <td>$170,514</td>
+                                    <td class="positive">+4.56%</td>
+                                    <td>6.0%</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>GOOGL</strong></td>
+                                    <td>Alphabet Inc.</td>
+                                    <td>920</td>
+                                    <td>$156.78</td>
+                                    <td>$144,238</td>
+                                    <td class="negative">-0.89%</td>
+                                    <td>5.1%</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>TSLA</strong></td>
+                                    <td>Tesla Inc.</td>
+                                    <td>650</td>
+                                    <td>$198.45</td>
+                                    <td>$128,993</td>
+                                    <td class="positive">+3.21%</td>
+                                    <td>4.5%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text" data-aos="fade-right">
+                        <h2 class="section-title">About Our Research</h2>
+                        <p class="about-description">
+                            With over 15 years of experience in institutional investment management, 
+                            our research team combines quantitative analysis with deep market insights 
+                            to identify exceptional investment opportunities.
+                        </p>
+                        <div class="credentials">
+                            <div class="credential">
+                                <div class="credential__icon">🎓</div>
+                                <div class="credential__content">
+                                    <h4>CFA Charter Holders</h4>
+                                    <p>Certified Financial Analyst credentials</p>
+                                </div>
+                            </div>
+                            <div class="credential">
+                                <div class="credential__icon">📊</div>
+                                <div class="credential__content">
+                                    <h4>Quantitative Analysis</h4>
+                                    <p>Advanced statistical modeling and backtesting</p>
+                                </div>
+                            </div>
+                            <div class="credential">
+                                <div class="credential__icon">🏆</div>
+                                <div class="credential__content">
+                                    <h4>Proven Track Record</h4>
+                                    <p>Consistent outperformance over market cycles</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-visual" data-aos="fade-left">
+                        <div class="metrics-grid">
+                            <div class="metric">
+                                <span class="metric__value">15+</span>
+                                <span class="metric__label">Years Experience</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric__value">$2.8B</span>
+                                <span class="metric__label">Assets Analyzed</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric__value">500+</span>
+                                <span class="metric__label">Research Reports</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric__value">92%</span>
+                                <span class="metric__label">Success Rate</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="contact-content">
+                    <div class="contact-info" data-aos="fade-right">
+                        <h2 class="section-title">Get Investment Insights</h2>
+                        <p class="contact-description">
+                            Subscribe to our research newsletter and get exclusive access to our latest 
+                            investment analysis, market insights, and portfolio updates.
+                        </p>
+                        <div class="contact-features">
+                            <div class="feature">
+                                <span class="feature__icon">📧</span>
+                                <span class="feature__text">Weekly market analysis</span>
+                            </div>
+                            <div class="feature">
+                                <span class="feature__icon">📊</span>
+                                <span class="feature__text">Exclusive research reports</span>
+                            </div>
+                            <div class="feature">
+                                <span class="feature__icon">💡</span>
+                                <span class="feature__text">Investment opportunities</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form" data-aos="fade-left">
+                        <form class="newsletter-form" id="newsletter-form">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Full Name</label>
+                                <input type="text" id="name" name="name" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" id="email" name="email" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="interest" class="form-label">Investment Interest</label>
+                                <select id="interest" name="interest" class="form-input">
+                                    <option value="">Select your interest</option>
+                                    <option value="stocks">Individual Stocks</option>
+                                    <option value="etfs">ETFs & Funds</option>
+                                    <option value="crypto">Cryptocurrency</option>
+                                    <option value="bonds">Bonds & Fixed Income</option>
+                                    <option value="alternatives">Alternative Investments</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn--primary btn--full">
+                                Subscribe to Research
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">
+                        <svg class="footer-logo__icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill="currentColor" d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 1L9 7V9C9 10.1 9.9 11 11 11V16L7.5 17.5C7.1 17.7 6.6 17.5 6.4 17.1L4.1 12.3L2.5 13L4.8 17.8C5.5 19.2 7.2 19.8 8.6 19.1L12 17.4L15.4 19.1C16.8 19.8 18.5 19.2 19.2 17.8L21.5 13L19.9 12.3L17.6 17.1C17.4 17.5 16.9 17.7 16.5 17.5L13 16V11C14.1 11 15 10.1 15 9H21Z"/>
+                        </svg>
+                        <span class="footer-logo__text">InvestPro</span>
+                    </a>
+                    <p class="footer-description">
+                        Professional investment research and portfolio management for the modern investor.
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-title">Research</h4>
+                        <ul class="footer-list">
+                            <li><a href="#" class="footer-link">Market Analysis</a></li>
+                            <li><a href="#" class="footer-link">Stock Reports</a></li>
+                            <li><a href="#" class="footer-link">Sector Reviews</a></li>
+                            <li><a href="#" class="footer-link">Economic Outlook</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-title">Tools</h4>
+                        <ul class="footer-list">
+                            <li><a href="#" class="footer-link">Portfolio Tracker</a></li>
+                            <li><a href="#" class="footer-link">Risk Calculator</a></li>
+                            <li><a href="#" class="footer-link">Screener</a></li>
+                            <li><a href="#" class="footer-link">Watchlist</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-title">Company</h4>
+                        <ul class="footer-list">
+                            <li><a href="#" class="footer-link">About Us</a></li>
+                            <li><a href="#" class="footer-link">Team</a></li>
+                            <li><a href="#" class="footer-link">Careers</a></li>
+                            <li><a href="#" class="footer-link">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    © 2025 InvestPro. All rights reserved. Investment advice is subject to market risks.
+                </p>
+                <div class="footer-legal">
+                    <a href="#" class="footer-legal-link">Privacy Policy</a>
+                    <a href="#" class="footer-legal-link">Terms of Service</a>
+                    <a href="#" class="footer-legal-link">Disclaimer</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading overlay -->
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="/assets/js/performance.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/charts.js"></script>
+    <script src="/assets/js/animations.js"></script>
+    <script src="/assets/js/advanced-effects.js"></script>
+    <script src="/assets/js/testing.js"></script>
+    <script src="/assets/js/browser-testing.js"></script>
+    <script src="/assets/js/validation.js"></script>
+</body>
+</html>

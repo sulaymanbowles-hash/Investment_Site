@@ -1,0 +1,557 @@
+/*
+==========================================================================
+INVESTMENT SITE - CONTACT & FOOTER PREMIUM STYLING
+==========================================================================
+Advanced contact forms, newsletter subscription, and footer design
+==========================================================================
+*/
+
+/* ==========================================================================
+   ENHANCED CONTACT SECTION
+   ========================================================================== */
+.contact {
+  padding: var(--space-24) 0;
+  background: 
+    linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.8) 100%),
+    radial-gradient(ellipse at center bottom, rgba(13, 148, 136, 0.06) 0%, transparent 60%);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    repeating-conic-gradient(
+      from 0deg at 50% 50%,
+      transparent 0deg,
+      rgba(255, 255, 255, 0.01) 1deg,
+      transparent 2deg
+    );
+  z-index: -1;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+  align-items: start;
+}
+
+.contact-info {
+  position: relative;
+}
+
+.contact-description {
+  font-size: var(--font-size-lg);
+  color: var(--color-gray-300);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--space-12);
+}
+
+.contact-features {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4);
+  background: var(--glass-bg);
+  backdrop-filter: blur(15px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  transition: all var(--micro-medium);
+  cursor: pointer;
+}
+
+.feature:hover {
+  background: var(--glass-bg-strong);
+  transform: translateX(8px);
+  border-color: rgba(13, 148, 136, 0.3);
+}
+
+.feature__icon {
+  font-size: var(--font-size-xl);
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--color-secondary), var(--color-accent));
+  border-radius: var(--radius-lg);
+  flex-shrink: 0;
+}
+
+.feature__text {
+  color: var(--color-white);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-base);
+}
+
+/* ==========================================================================
+   PREMIUM CONTACT FORM
+   ========================================================================== */
+.contact-form {
+  background: var(--glass-bg-strong);
+  backdrop-filter: blur(30px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-3xl);
+  padding: var(--space-12);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-form::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-secondary), var(--color-accent));
+}
+
+.newsletter-form {
+  display: grid;
+  gap: var(--space-8);
+}
+
+.form-group {
+  position: relative;
+}
+
+.form-label {
+  display: block;
+  color: var(--color-gray-300);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-3);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+.form-input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4) var(--space-6);
+  color: var(--color-white);
+  font-size: var(--font-size-base);
+  font-family: inherit;
+  transition: all var(--micro-medium);
+  backdrop-filter: blur(10px);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--color-secondary);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 
+    0 0 0 3px rgba(13, 148, 136, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
+}
+
+.form-input::placeholder {
+  color: var(--color-gray-400);
+}
+
+select.form-input {
+  cursor: pointer;
+  background-image: 
+    linear-gradient(45deg, transparent 50%, var(--color-gray-400) 50%),
+    linear-gradient(135deg, var(--color-gray-400) 50%, transparent 50%);
+  background-position: 
+    calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px);
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+}
+
+.btn--full {
+  width: 100%;
+  justify-content: center;
+  padding: var(--space-5) var(--space-8);
+  font-size: var(--font-size-lg);
+  margin-top: var(--space-4);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn--full::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+  transition: all 0.5s ease;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.btn--full:hover::after {
+  width: 300px;
+  height: 300px;
+}
+
+/* ==========================================================================
+   ENHANCED FOOTER
+   ========================================================================== */
+.footer {
+  background: 
+    linear-gradient(135deg, rgba(15, 23, 42, 0.98) 0%, rgba(30, 41, 59, 0.95) 100%),
+    var(--gradient-mesh);
+  border-top: 1px solid var(--glass-border);
+  padding: var(--space-20) 0 var(--space-8);
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(13, 148, 136, 0.5), transparent);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: var(--space-12);
+  margin-bottom: var(--space-16);
+}
+
+.footer-brand {
+  max-width: 400px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+  text-decoration: none;
+  transition: all var(--micro-medium);
+}
+
+.footer-logo:hover {
+  transform: scale(1.05);
+}
+
+.footer-logo__icon {
+  width: 40px;
+  height: 40px;
+  fill: var(--color-secondary);
+  filter: drop-shadow(0 0 10px rgba(13, 148, 136, 0.5));
+}
+
+.footer-logo__text {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  background: linear-gradient(135deg, var(--color-white), var(--color-gray-300));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.footer-description {
+  color: var(--color-gray-300);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+}
+
+.footer-column {
+  min-width: 0;
+}
+
+.footer-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-white);
+  margin-bottom: var(--space-6);
+  position: relative;
+}
+
+.footer-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-secondary), var(--color-accent));
+  border-radius: var(--radius-full);
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: var(--space-3);
+}
+
+.footer-link {
+  color: var(--color-gray-300);
+  text-decoration: none;
+  font-size: var(--font-size-base);
+  transition: all var(--micro-medium);
+  position: relative;
+  display: inline-block;
+}
+
+.footer-link::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--color-secondary);
+  transition: width var(--micro-medium);
+}
+
+.footer-link:hover {
+  color: var(--color-secondary);
+  transform: translateX(4px);
+}
+
+.footer-link:hover::before {
+  width: 100%;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--space-8);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.footer-copyright {
+  color: var(--color-gray-400);
+  font-size: var(--font-size-sm);
+  margin: 0;
+}
+
+.footer-legal {
+  display: flex;
+  gap: var(--space-6);
+}
+
+.footer-legal-link {
+  color: var(--color-gray-400);
+  text-decoration: none;
+  font-size: var(--font-size-sm);
+  transition: color var(--micro-medium);
+}
+
+.footer-legal-link:hover {
+  color: var(--color-secondary);
+}
+
+/* ==========================================================================
+   ENHANCED LOADING OVERLAY
+   ========================================================================== */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.98) 100%),
+    var(--gradient-mesh);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+  backdrop-filter: blur(20px);
+}
+
+.loading-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.loading-spinner {
+  width: 60px;
+  height: 60px;
+  border: 3px solid rgba(13, 148, 136, 0.2);
+  border-top: 3px solid var(--color-secondary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  position: relative;
+}
+
+.loading-spinner::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border: 3px solid transparent;
+  border-top: 3px solid var(--color-accent);
+  border-radius: 50%;
+  animation: spin 1.5s linear infinite reverse;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ==========================================================================
+   PREMIUM ANIMATIONS & MICRO-INTERACTIONS
+   ========================================================================== */
+.animate-in {
+  animation: slideInUp 0.6s cubic-bezier(0.4, 0.0, 0.2, 1) forwards;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Pulse animation for important elements */
+.pulse-glow {
+  animation: pulseGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 5px rgba(13, 148, 136, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(13, 148, 136, 0.8), 0 0 40px rgba(13, 148, 136, 0.3);
+  }
+}
+
+/* Text shimmer effect */
+.text-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--color-gray-300) 0%,
+    var(--color-white) 50%,
+    var(--color-gray-300) 100%
+  );
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% {
+    background-position: -200% 0;
+  }
+  50% {
+    background-position: 200% 0;
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN FOR CONTACT & FOOTER
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-12);
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-8);
+  }
+  
+  .footer-brand {
+    grid-column: 1 / -1;
+    max-width: none;
+    margin-bottom: var(--space-8);
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: var(--space-16) 0;
+  }
+  
+  .contact-form {
+    padding: var(--space-8);
+  }
+  
+  .newsletter-form {
+    gap: var(--space-6);
+  }
+  
+  .footer {
+    padding: var(--space-16) 0 var(--space-8);
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-4);
+  }
+  
+  .footer-legal {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-form {
+    padding: var(--space-6);
+  }
+  
+  .form-input {
+    padding: var(--space-3) var(--space-4);
+    font-size: var(--font-size-sm);
+  }
+  
+  .btn--full {
+    padding: var(--space-4) var(--space-6);
+    font-size: var(--font-size-base);
+  }
+  
+  .feature {
+    padding: var(--space-3);
+  }
+  
+  .feature__icon {
+    width: 40px;
+    height: 40px;
+    font-size: var(--font-size-lg);
+  }
+}

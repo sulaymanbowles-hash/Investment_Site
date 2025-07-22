@@ -1,52 +1,45 @@
 {
-  "name": "investment-thesis-platform",
+  "name": "investment-site",
   "version": "1.0.0",
-  "description": "AI-Powered Portfolio Intelligence & Technology Investment Analysis Platform",
-  "main": "index.html",
-  "type": "module",
+  "description": "Professional investment research showcase website with interactive data visualizations",
+  "main": "server.js",
   "scripts": {
-    "dev": "python -m http.server 3000",
-    "start": "python -m http.server 3000",
-    "build": "echo 'Build process not yet implemented - Phase 2+'",
-    "lint": "echo 'Linting not yet implemented - Phase 2+'",
-    "test": "echo 'Testing not yet implemented - Phase 2+'"
+    "start": "node server.js",
+    "dev": "node server.js",
+    "serve": "node server.js",
+    "build": "echo 'Build process - minify CSS/JS, optimize images, etc.'",
+    "test": "echo 'Run tests'",
+    "lint": "echo 'Run linting'",
+    "format": "echo 'Format code'"
   },
   "keywords": [
     "investment",
-    "portfolio",
-    "ai",
     "finance",
-    "technology",
-    "analysis",
-    "real-time",
-    "dashboard"
+    "portfolio",
+    "charts",
+    "data-visualization",
+    "responsive",
+    "progressive-web-app"
   ],
-  "author": "Sulayman Bowles",
+  "author": "Investment Research Team",
   "license": "MIT",
-  "dependencies": {
-    "chart.js": "^4.4.0"
+  "engines": {
+    "node": ">=14.0.0"
   },
+  "dependencies": {},
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sulaymanbowles-hash/Investment_Site.git"
+    "url": "https://github.com/sulaymanbowles-hash/Investment_Site.git"
   },
   "bugs": {
     "url": "https://github.com/sulaymanbowles-hash/Investment_Site/issues"
   },
   "homepage": "https://github.com/sulaymanbowles-hash/Investment_Site#readme",
-  "engines": {
-    "node": ">=16.0.0",
-    "python": ">=3.8.0"
-  },
   "browserslist": [
     "> 1%",
     "last 2 versions",
-    "not dead"
-  ],
-  "config": {
-    "phase": "1",
-    "enableAPIs": false,
-    "developmentMode": true
-  }
+    "not dead",
+    "not ie 11"
+  ]
 }
